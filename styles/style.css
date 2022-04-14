@@ -1,3 +1,4 @@
+
 :root {
   --black: #0a0908;
   --red: #ff6978;
@@ -23,3 +24,32 @@
 #btn-search {
   background-color: var(--red);
 }
+
+
+.moreInfo {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #4CAF50;
+}
+.container {
+    padding: 20px;
+    
+}
+
+.top__brand {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.logo {
+  color: #ff6978;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+
