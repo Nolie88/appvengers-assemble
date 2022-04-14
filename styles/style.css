@@ -1,0 +1,10 @@
+.top__brand {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.logo {
+  color: #ff6978;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
