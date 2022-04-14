@@ -6,31 +6,58 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <link rel="stylesheet" href="./styles/style.css">
+
+    <!--font awesome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/orbitcss/css/orbit.min.css"
     />
-    <title>OrbitCSS - Pricing Example 1</title>
+
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Hollyview - Search, Like and Love your Movies.</title>
   </head>
   <body>
-    <nav class="top has-bg-black has-text-white is-mobile-responsive">
-      <div class="top__brand">
-        <h4>Company Name</h4>
-      </div>
+    <!-- This is the top Section, includes logo and nav -->
+    <nav class="top has-text-white is-mobile-responsive has-bg-black navbar">
+      <div class="top__brand"><h4 class="logo">HollyView</h4></div>
       <div class="top__burger is-end">
         <span></span>
       </div>
       <div class="top__links is-end">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li><a href="#">LOGIN</a></li>
         </ul>
       </div>
     </nav>
+    <!--hero section with search bar button-->
+    <section class="hero is-medium" style="display: block">
+      <div class="hero__content has-bg-light grid has-centered">
+        <div class="is-input-group" style="width: 50%">
+          <input type="text" placeholder="search your fav movie..." />
+          <button class="button is-primary">
+            <i
+              class="fa-solid fa-magnifying-glass"
+              style="line-height: 1.5em"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
     <section class="section">
+
       <div class="container grid  has-centered has-text-center">
         <div class="column is-full">
           <h1></h1>
@@ -38,6 +65,33 @@
           </p>
         </div>
         <div class="column is-one-third has-bg-warning is-desktop-x-one-quarter">
+
+      <div class="container grid has-centered has-text-center">
+        <div class="column is-one-third is-desktop-x-one-quarter">
+          <div class="card">
+            <div class="card__header is-vertically-centered">
+              <h6>Personal</h6>
+            </div>
+            <div class="card__content">
+              <h4>Free</h4>
+              <h4>$0</h4>
+              <p>AUD / user / month</p>
+              <hr />
+              <ul class="has-no-list-style">
+                <li>5 users</li>
+                <li>10GB Storage (shared)</li>
+                <li>Some other feature</li>
+              </ul>
+            </div>
+            <div class="card__footer">
+              <button class="button is-full is-primary is-outline">
+                Sign up for free
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third is-desktop-x-one-quarter">
+
           <div class="card">
             
             <div
