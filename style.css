@@ -1,0 +1,15 @@
+a {
+    color: #FF6978;
+}
+
+#footer {
+    padding: 10px;
+    align-items: center;
+    background-color: #747578;
+    width: fit-content;
+}
+
+#footer p {
+    margin-left: 30px;
+    margin-top: 5px;
+}
