@@ -6,44 +6,92 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    
+
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--font awesome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--orbit css bootstrap-->
+
+
+
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/orbitcss/css/orbit.min.css"
     />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <link rel="stylesheet" href="./styles/style.css">
 
+
+
+
+    <!--link css file-->
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <title>OrbitCSS - Pricing Example 1</title>
+
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Hollyview - Search, Like and Love your Movies.</title>
+ 
   </head>
 
   <body>
-    <nav class="top has-bg-black has-text-white is-mobile-responsive">
-      <div class="top__brand">
-        <h4>Company Name</h4>
-      </div>
+    <!-- This is the top Section, includes logo and nav -->
+    <nav class="top has-text-white is-mobile-responsive has-bg-black navbar">
+      <div class="top__brand"><h4 class="logo">HollyView</h4></div>
       <div class="top__burger is-end">
         <span></span>
       </div>
       <div class="top__links is-end">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li><a href="#">LOGIN</a></li>
         </ul>
       </div>
     </nav>
+    <!--hero section with search bar button-->
+    <section class="hero is-medium myherostyle" style="display: block">
+      <div class="hero__content has-bg-light grid has-centered">
+        <div class="is-input-group" id="search-box" style="width: 50%">
+          <input
+            type="text"
+            id="input-search"
+            placeholder="search your fav movie..."
+          />
+          <button type="submit" class="button is-primary" id="btn-search">
+            <i
+              class="fa-solid fa-magnifying-glass"
+              style="line-height: 1.5em"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
     <section class="section">
-      <div class="container grid has-centered has-text-center">
+
+      <div class="container grid  has-centered has-text-center">
         <div class="column is-full">
-          <h1>Pricing</h1>
+          <h1></h1>
           <p>
-            A simple pricing selection example using the grid and card elements.
           </p>
         </div>
+        <div class="column is-one-third has-bg-warning is-desktop-x-one-quarter">
+
+      <div class="container grid has-centered has-text-center">
         <div class="column is-one-third is-desktop-x-one-quarter">
           <div class="card_container">
               <!--add this in the header section <script src="https://kit.fontawesome.com/94c9893010.js" crossorigin="anonymous"></script> -->
@@ -63,6 +111,24 @@
                 <i class="add_button fa-solid fa-circle-plus fa-2xl"></i>
                 <h4 style="margin-top: 0.25em;">Add movie</h4>       
             </div>
+
+          </div>
+        </div>
+        <div class="column is-one-third is-desktop-x-one-quarter">
+
+          <div class="card">
+            
+            <div
+              class="card__header  has-text-white is-vertically-centered">
+              <h3>Header</h3>
+            </div>         
+            <div class="card__content">
+              <img src="./img/img_girl.jpg" alt="Flowers in Chania" width="460" height="345">
+            <button class="moreInfo">More Info</button>
+            </div>
+            </div>
+          </div>
+
         </div>
 
 
