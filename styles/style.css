@@ -1,4 +1,10 @@
 
+.card_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 :root {
   --black: #0a0908;
   --red: #ff6978;
@@ -51,5 +57,6 @@
   font-size: 40px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 
 
