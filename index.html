@@ -42,7 +42,8 @@
     <!--hero section with search bar button-->
     <section class="hero is-medium myherostyle" style="display: block">
       <div class="hero__content has-bg-light grid has-centered">
-        <div class="is-input-group" id="search-box" style="width: 50%">
+        <form class="form-element" action="#" onsubmit="event.preventDefault();handleFormSubmit(this);">
+        <div class="is-input-group" id="search-box">
           <input
             type="text"
             id="input-search"
@@ -55,6 +56,7 @@
             ></i>
           </button>
         </div>
+        </form>
       </div>
     </section>
     <section class="section">
@@ -130,5 +132,6 @@
         </div>
      
     </footer>
+    <script src="./styles/script.js"></script>
   </body>
 </html>
