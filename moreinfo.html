@@ -15,22 +15,54 @@
     <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
-<body>
-    <main>
-        <h1><span id="movie-title"></span></h1>
-        <div class="movie-img">Movie img goes here <span id="movie-image"></span></div>
-        <div class="description">Movie description here<span id="movie-description"></span></div>
-        <button id="add-btn">Add button</button>
-        <p id="genre">Movie genre info here<span id="movie-genre"></span></p>
+<body id="background-pic">
+    <!-- This is the top Section, includes logo and nav -->
+    <nav class="top has-text-white is-mobile-responsive has-bg-black navbar">
+        <div class="top__brand">
+            <h4 class="logo">HollyView</h4>
+        </div>
+        <div class="top__burger is-end">
+            <span></span>
+        </div>
+        <div class="top__links is-end">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Favorites</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="movie-container">
+        <div id="movie-img"><span id="movie-image">Movie img goes here</span></div>
+        <div class="description-card">
+            <h1><span id="movie-title">Movie title</span></h1>
+            <p><span id="movie-synopsis">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </span></p>
+            <button id="add-btn">Add To Favourites</button>
+            <p id="genre">Movie genre info here<span id="movie-genre"></span></p>
+
+        </div>
     </main>
     <section class="actors-container">
-        <div class="actors-card">Actors info <span id="actors"></span></div>
-        <div class="actors-card">Actors info <span id="actors"></span></div>
-        <div class="actors-card">Actors info <span id="actors"></span></div>
-        <div class="actors-card">Actors info <span id="actors"></span></div>
-        <div class="actors-card">Actors info <span id="actors"></span></div>
+        <h2>ACTORS</h2>
+        <div class="actors-card"><span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span></div>
+        <div class="actors-card"><span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span></div>
+        <div class="actors-card"><span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span></div>
+        <div class="actors-card"><span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span></div>
+        <div class="actors-card"><span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span></div>
     </section>
+    <footer>
+        <nav class="container has-centered top" id="footer">
+            <div class="top__social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <p> © HollyView by AppVengers Assemble 2022 </p>
+                </ul>
+            </div>
 
+    </footer>
     <script src="./styles/script.js"></script>
 
 </body>
