@@ -36,5 +36,12 @@ function displayMovies(data) {
     //get image backgroung
     movieSearchContainer.style.backgroundImage = `url(${mediaDetails.mediaImage})`;
     movieSearchedEl.appendChild(movieSearchContainer);
+
+    movieSearchedEl.addEventListener("click", function() {
+      var moreinfoLink = "https://www.google.com/"
+      window.location.href = moreinfoLink
+ 
+    })
+
   }
 }
