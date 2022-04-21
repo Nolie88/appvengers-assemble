@@ -61,13 +61,28 @@
 }
 
 .logo {
-  color: #ff6978;
+  color: #fffcf9;
   font-size: 40px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: bold;
 }
 
 a {
   color: #ff6978;
+
+  /* Navbar */
+}
+.top__links {
+  --background-color: transparent;
+  --font-color: var (--red);
+  --border-radius: 6px;
+  --padding: 0;
+  --link-padding: 0.3125rem 0.9375rem;
+
+  --hover-background-color: #ff6978;
+  --hover-font-color: inherit;
+  --active-background-color: transparent;
+  --active-font-color: inherit;
 }
 
 #footer {
@@ -225,7 +240,7 @@ a {
 #footer {
   padding: 10px;
   align-items: center;
-  background-color: #747578;
+  background-color: transparent;
   width: fit-content;
 }
 
@@ -244,10 +259,14 @@ a {
 
 .search-display {
   border-radius: 12px;
-  box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
+  box-shadow: 0 10px 10px -4px rgb(0 0 0 / 15%);
   background-color: transparent;
   color: #333;
   margin: 0.3em;
   position: relative;
   width: 200px;
+}
+
+.fab {
+  color: var(--red);
 }
