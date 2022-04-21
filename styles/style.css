@@ -1,204 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
 .card_container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 :root {
-    --black: #0a0908;
-    --red: #ff6978;
-    --white: #fffcf9;
-    --grey: #747578;
-    --blue: #71a9f7;
+  --black: #0a0908;
+  --red: #ff6978;
+  --white: #fffcf9;
+  --grey: #747578;
+  --blue: #71a9f7;
 }
-
 
 /* adding style to the searchbox */
 
 .form-element {
-    width: -webkit-fill-available;
-    max-width: 60%;
+  width: -webkit-fill-available;
+  max-width: 60%;
 }
 
 #search-box {
-    border: 1px solid var(--grey);
-    border-radius: 5px;
-    width: 100%;
-    outline: 0;
-    background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  width: 100%;
+  outline: 0;
+  background-color: var(--white);
 }
 
 #search-box:hover,
 #search-box:focus {
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-    background-color: var(--white);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
 }
 
 #btn-search {
-    background-color: var(--red);
+  background-color: var(--red);
 }
 
 .moreInfo {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4caf50;
 }
 
 .container {
-    padding: 20px;
+  padding: 20px;
 }
 
 .top__brand {
-    margin-top: -10px;
-    margin-bottom: -10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .logo {
-    color: #ff6978;
-    font-size: 40px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ff6978;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 a {
-    color: #FF6978;
+  color: #ff6978;
 }
 
 #footer {
-    padding: 10px;
-    align-items: center;
-    background-color: #747578;
-    width: fit-content;
+  padding: 10px;
+  align-items: center;
+  background-color: #747578;
+  width: fit-content;
 }
 
 #footer p {
-    margin-left: 30px;
-    margin-top: 5px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-
 
 /* More info.html CSS starts here */
 
-#background-pic {
-    background-color: var(--grey);
-}
+/* #background-pic {
+  background-color: var(--grey);
+} */
 
 .movie-container {
-    height: 400px;
-    width: 90%;
-    margin: 25px auto 25px auto;
-    background-color: #000000;
-    opacity: 70%;
-    display: flex;
+  height: 400px;
+  width: 90%;
+  margin: 25px auto 25px auto;
+  background-color: #000000;
+  opacity: 70%;
+  display: flex;
 }
 
 #movie-img {
-    background-color: aquamarine;
-    height: 400px;
-    width: 20%;
+  background-color: aquamarine;
+  height: 400px;
+  width: 20%;
 }
 
 .description-card {
-    width: 80%;
-    padding: 20px;
-    z-index: 2;
+  width: 80%;
+  padding: 20px;
+  z-index: 2;
 }
 
 .movie-container::before {
-    opacity: 40%;
+  opacity: 40%;
 }
 
 #movie-title {
-    color: var(--red);
-    font-size: 35px;
-    z-index: 1;
+  color: var(--red);
+  font-size: 35px;
+  z-index: 1;
 }
 
 #movie-synopsis {
-    color: white;
-    z-index: 1;
+  color: white;
+  z-index: 1;
 }
 
 #add-btn {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #4caf50;
-    z-index: 1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4caf50;
+  z-index: 1;
 }
 
 #genre {
-    height: 10px;
-    background-color: #000000;
-    color: white;
+  height: 10px;
+  background-color: #000000;
+  color: white;
 }
 
 .actors-container {
-    display: flex;
-    height: 400px;
-    width: 90%;
-    margin: 25px auto 25px auto;
-    justify-content: space-between;
-    background-color: white;
+  display: flex;
+  height: 400px;
+  width: 90%;
+  margin: 25px auto 25px auto;
+  justify-content: space-between;
+  background-color: white;
 }
 
 h2 {
-    color: var(--grey);
-    margin: 25px;
-    display: contents;
+  color: var(--grey);
+  margin: 25px;
+  display: contents;
 }
 
 .actors-card {
-    height: 400px;
-    width: 200px;
-    border: 1px solid black;
+  height: 400px;
+  width: 200px;
+  border: 1px solid black;
 }
 
 #actors-img {
-    width: 200px;
-    height: 300px;
-    background-color: #ff6978;
+  width: 200px;
+  height: 300px;
+  background-color: #ff6978;
 }
 
+#videos {
+  width: 80%;
+  margin: 0 auto;
+}
 
 /* footer section */
 
 a {
-    color: #ff6978;
+  color: #ff6978;
 }
 
 #footer {
-    padding: 10px;
-    align-items: center;
-    background-color: #747578;
-    width: fit-content;
+  padding: 10px;
+  align-items: center;
+  background-color: #747578;
+  width: fit-content;
 }
 
 #footer p {
-    margin-left: 30px;
-    margin-top: 5px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-
 
 /* search div */
 
 #movie-search {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .search-display {
-    height: 400px;
-    width: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 0.5em;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
+  background-color: transparent;
+  color: #333;
+  margin: 0.3em;
+  position: relative;
+  width: 200px;
 }
