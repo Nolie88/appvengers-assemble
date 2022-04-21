@@ -68,6 +68,13 @@ function displayMovies(data) {
     moreInfoEL.addEventListener("click", () => {
       location.assign(queryString);
     });
+
+    // not sure if TIM //
+    // movieSearchedEl.addEventListener("click", function() {
+    //   var moreinfoLink = "https://www.google.com/"
+    //   window.location.href = moreinfoLink
+
+    // })
   }
 }
 
