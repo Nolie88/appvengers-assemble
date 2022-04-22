@@ -42,7 +42,6 @@ const getMovieDetails = function () {
                 displayMovieData(data);
             });
           });
-
          
     }
 };
