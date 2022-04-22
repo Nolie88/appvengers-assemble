@@ -49,13 +49,13 @@ function displayMovies(data) {
     //add more info btn
     let moreInfoEL = document.createElement("button");
     moreInfoEL.classList.add("moreinfo-btn");
-    moreInfoEL.appendChild(document.createTextNode("more info"));
+    moreInfoEL.appendChild(document.createTextNode("More Info"));
     buttonDiv.appendChild(moreInfoEL);
 
     //add to fav btn
 
     let addToFavBtn = document.createElement("button");
-    addToFavBtn.appendChild(document.createTextNode("add to fav"));
+    addToFavBtn.appendChild(document.createTextNode("Add to Fav"));
     buttonDiv.appendChild(addToFavBtn);
     addToFavBtn.classList.add("addfav-btn");
 
@@ -68,7 +68,8 @@ function displayMovies(data) {
     moreInfoEL.addEventListener("click", () => {
       location.assign(queryString);
     });
-
+     
+    localStorage.setItem("key", movieTile);
     // not sure if TIM //
     // movieSearchedEl.addEventListener("click", function() {
     //   var moreinfoLink = "https://www.google.com/"
