@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  position: relative;
+}
 .card_container {
   display: flex;
   justify-content: space-between;
@@ -13,6 +18,18 @@
   --white: #fffcf9;
   --grey: #747578;
   --blue: #71a9f7;
+}
+
+/* hero image */
+.hero {
+  height: 500px;
+}
+
+.hero__content {
+  background-image: url("/img/picmovies.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* adding style to the searchbox */
@@ -38,6 +55,12 @@
 
 #btn-search {
   background-color: var(--red);
+}
+
+/* Movies display section */
+
+#movie-search {
+  background-color: #000000;
 }
 
 .moreInfo {
@@ -239,9 +262,12 @@ a {
 
 #footer {
   padding: 10px;
+  color: #fffcf9;
   align-items: center;
-  background-color: transparent;
-  width: fit-content;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 #footer p {
