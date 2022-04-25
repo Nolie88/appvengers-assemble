@@ -4,7 +4,8 @@ let mediaTitleEl = document.querySelector("#movie-title");
 let movieSearchedEl = document.querySelector("#movie-search");
 let moreInfoEl = document.querySelector(".moreinfo-btn");
 let FavsBtn = document.querySelector("#addfav-btn");
-let savedHistory = JSON.parse(localStorage.getItem("favourite movies")) || [];
+let savedHistory = JSON.parse(localStorage.getItem("")) || [];
+console.log(savedHistory)
 
 
 // function to get the movie name input from the search bar
