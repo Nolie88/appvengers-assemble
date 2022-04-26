@@ -39,7 +39,7 @@ function displayMovies(data) {
         const movieSearchContainer = createMovieCard(mediaDetails);
         const buttonDiv = movieSearchContainer.querySelector('div');
         let addToFavBtn = document.createElement("button");
-        addToFavBtn.appendChild(document.createTextNode("add to fav"));
+        addToFavBtn.appendChild(document.createTextNode("Add To Fav"));
         buttonDiv.appendChild(addToFavBtn);
         addToFavBtn.classList.add("addfav-btn");
 

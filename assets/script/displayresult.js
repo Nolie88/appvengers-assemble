@@ -6,7 +6,7 @@ let mediaGenreEl = document.querySelector("#genre");
 let mediaVideoEl = document.querySelector("#videos");
 apiKey = "2200016b";
 
-let ytubeApiKey = "AIzaSyBbosWwT20vBTJeOJ9zQLIwNjHe32LlOn4";
+let ytubeApiKey = "AIzaSyBFEZloPQvEioYfxYyyYd6Hilo4mmztviw";
 // get movie id from the clicked btn ,
 
 // call the api with the current movie ID
@@ -58,6 +58,7 @@ function displayMoreInfo(data) {
 function displayVideo(ydata) {
   //   for (i = 0; i < ydata.items.length; i++) {
   let videoContainer = document.createElement("div");
+  // videoContainer.classList.add("column", "is-full");
   let frame = document.createElement("iframe");
   let frameSrc = ydata.items[0].id.videoId;
   frame.setAttribute("src", `https://www.youtube.com/embed/${frameSrc}`);

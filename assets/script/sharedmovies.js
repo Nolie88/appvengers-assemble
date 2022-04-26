@@ -20,7 +20,7 @@ function createMovieCard(movie) {
     //add more info btn
     let moreInfoEL = document.createElement("button");
     moreInfoEL.classList.add("moreinfo-btn");
-    moreInfoEL.appendChild(document.createTextNode("more info"));
+    moreInfoEL.appendChild(document.createTextNode("More Info"));
     buttonDiv.appendChild(moreInfoEL);
     movieSearchContainer.appendChild(buttonDiv);
     return movieSearchContainer;
