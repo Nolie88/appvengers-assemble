@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  position: relative;
+}
 .card_container {
   display: flex;
   justify-content: space-between;
@@ -13,6 +18,18 @@
   --white: #fffcf9;
   --grey: #747578;
   --blue: #71a9f7;
+}
+
+/* hero image */
+.hero {
+  height: 500px;
+}
+
+.hero__content {
+  background-image: url("./img/picmovies.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* adding style to the searchbox */
@@ -38,6 +55,12 @@
 
 #btn-search {
   background-color: var(--red);
+}
+
+/* Movies display section */
+
+#movie-search {
+  background-color: #000000;
 }
 
 .moreInfo {
@@ -90,25 +113,28 @@
 }
 
 .logo {
-  color: #ff6978;
+  color: #fffcf9;
   font-size: 40px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: bold;
 }
 
 a {
   color: #ff6978;
-}
 
-#footer {
-  padding: 10px;
-  align-items: center;
-  background-color: #747578;
-  width: fit-content;
+  /* Navbar */
 }
+.top__links {
+  --background-color: transparent;
+  --font-color: var (--red);
+  --border-radius: 6px;
+  --padding: 0;
+  --link-padding: 0.3125rem 0.9375rem;
 
-#footer p {
-  margin-left: 30px;
-  margin-top: 5px;
+  --hover-background-color: #ff6978;
+  --hover-font-color: inherit;
+  --active-background-color: transparent;
+  --active-font-color: inherit;
 }
 
 /* More info.html CSS starts here */
@@ -282,10 +308,15 @@ a {
 }
 
 #footer {
+  display: flex;
+  justify-content: center;
   padding: 10px;
+  color: #fffcf9;
   align-items: center;
-  background-color: #747578;
-  width: fit-content;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 #footer p {
@@ -297,16 +328,20 @@ a {
 
 #movie-search {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .search-display {
   border-radius: 12px;
-  box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
+  box-shadow: 0 10px 10px -4px rgb(0 0 0 / 15%);
   background-color: transparent;
   color: #333;
-  margin: 0.3em;
+  margin: 0.5em;
   position: relative;
   width: 200px;
+}
+
+.fab {
+  color: var(--red);
 }
