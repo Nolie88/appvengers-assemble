@@ -4,8 +4,7 @@ let mediaTitleEl = document.querySelector("#movie-title");
 let movieSearchedEl = document.querySelector("#movie-search");
 let moreInfoEl = document.querySelector(".moreinfo-btn");
 let FavsBtn = document.querySelector("#addfav-btn");
-let savedHistory = JSON.parse(localStorage.getItem("")) || [];
-console.log(savedHistory)
+var savedMovies = document.querySelector("#saved-movie")
 
 
 // function to get the movie name input from the search bar
@@ -13,7 +12,7 @@ function handleFormSubmit(form) {
     const movieName = form.querySelector("#input-search").value;
     getApi(movieName);
 }
-
+// Function calling the API
 function getApi(movieName) {
     var requestUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
 
@@ -25,6 +24,8 @@ function getApi(movieName) {
     });
 }
 
+// Function to display the data based on the API database + user search. 
+// The rest of the elements are now in sharedmovies.js file. 
 function displayMovies(data) {
     movieSearchedEl.innerText = "";
     for (i = 0; i < data.Search.length; i++) {
@@ -33,42 +34,22 @@ function displayMovies(data) {
             mediaImage: data.Search[i].Poster,
             movieId: data.Search[i].imdbID,
         };
-        let movieSearchContainer = document.createElement("div");
-        movieSearchContainer.classList.add("search-display");
 
-        // add meadia poster
-        let moviePosterImg = document.createElement("img");
-        moviePosterImg.setAttribute("src", mediaDetails.mediaImage);
-        movieSearchContainer.appendChild(moviePosterImg);
-
-        // get movie title
-        let movieTile = document.createElement("p");
-        movieTile.appendChild(document.createTextNode(mediaDetails.mediaTitle));
-        movieSearchContainer.appendChild(movieTile);
-
-        // created div to add more info btn and add to fav btn
-
-        let buttonDiv = document.createElement("div");
-
-        //add more info btn
-        let moreInfoEL = document.createElement("button");
-        moreInfoEL.classList.add("moreinfo-btn");
-        moreInfoEL.appendChild(document.createTextNode("more info"));
-        buttonDiv.appendChild(moreInfoEL);
-
-        //add to fav btn
-
+        //Add to Fav btn
+        const movieSearchContainer = createMovieCard(mediaDetails);
+        const buttonDiv = movieSearchContainer.querySelector('div');
         let addToFavBtn = document.createElement("button");
         addToFavBtn.appendChild(document.createTextNode("add to fav"));
         buttonDiv.appendChild(addToFavBtn);
         addToFavBtn.classList.add("addfav-btn");
 
-        movieSearchContainer.appendChild(buttonDiv);
+
         movieSearchedEl.appendChild(movieSearchContainer);
 
-        // get more info of each media
+        // Get more info for each movie
         let queryString = "./moreinfo.html?q=" + mediaDetails.movieId;
 
+        const moreInfoEL = movieSearchContainer.querySelector('button');
         moreInfoEL.addEventListener("click", () => {
             location.assign(queryString);
         });
@@ -83,34 +64,27 @@ function displayMovies(data) {
         //Local storage - Function for storing favourite movies
 
         function setItemToLocalStorage(details) {
-            let savedMedia = []
-            var movieInform = document.querySelector("#input-search").value;
-            savedMedia.push(details);
-            localStorage.setItem(movieInform, JSON.stringify(savedMedia));
-            console.log(savedMedia)
 
-            let savedMovies = JSON.parse(localStorage.getItem(movieInform)) || [];
+
+            // Get all the existing favourited movies in Local Storage
+            const favesJson = localStorage.getItem("faves") || '[]';
+
+            /**
+             * @type {Array} 
+             */
+            const favouriteMovies = JSON.parse(favesJson);
+
+            // Add the latest clicked movie to Local Storage
+            favouriteMovies.push(details);
+            // Resave to LS
+            localStorage.setItem("faves", JSON.stringify(favouriteMovies));
+
 
 
         }
 
-
-        // not sure if TIM //
-        // movieSearchedEl.addEventListener("click", function() {
-        //   var moreinfoLink = "https://www.google.com/"
-        //   window.location.href = moreinfoLink
-
-        // })
     }
 }
-
-
-
-
-
-
-
-
 
 
 
