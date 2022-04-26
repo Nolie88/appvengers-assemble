@@ -29,6 +29,7 @@ function displayMovies(data) {
       mediaImage: data.Search[i].Poster,
       movieId: data.Search[i].imdbID,
     };
+
     let movieSearchContainer = document.createElement("div");
     movieSearchContainer.classList.add("search-display");
 
