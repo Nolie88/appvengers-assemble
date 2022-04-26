@@ -3,22 +3,25 @@ let mediaImageEl = document.querySelector("#movie-image");
 let mediaTitleEl = document.querySelector("#movie-title");
 let movieSearchedEl = document.querySelector("#movie-search");
 let moreInfoEl = document.querySelector(".moreinfo-btn");
+let FavsBtn = document.querySelector("#addfav-btn");
+let savedHistory = JSON.parse(localStorage.getItem("favourite movies")) || [];
+
 
 // function to get the movie name input from the search bar
 function handleFormSubmit(form) {
-  const movieName = form.querySelector("#input-search").value;
-  getApi(movieName);
+    const movieName = form.querySelector("#input-search").value;
+    getApi(movieName);
 }
 
 function getApi(movieName) {
-  var requestUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
+    var requestUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
 
-  fetch(requestUrl).then(function (response) {
-    response.json().then(function (data) {
-      console.log(data);
-      displayMovies(data);
+    fetch(requestUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+            displayMovies(data);
+        });
     });
-  });
 }
 
 function displayMovies(data) {
@@ -56,29 +59,61 @@ function displayMovies(data) {
     //add to fav btn
 
     let addToFavBtn = document.createElement("button");
-    addToFavBtn.appendChild(document.createTextNode("add to fav"));
+    addToFavBtn.appendChild(document.createTextNode("Add to Fav"));
     buttonDiv.appendChild(addToFavBtn);
     addToFavBtn.classList.add("addfav-btn");
 
-    movieSearchContainer.appendChild(buttonDiv);
-    movieSearchedEl.appendChild(movieSearchContainer);
+        movieSearchContainer.appendChild(buttonDiv);
+        movieSearchedEl.appendChild(movieSearchContainer);
 
-    // get more info of each media
-    let queryString = "./moreinfo.html?q=" + mediaDetails.movieId;
+        // get more info of each media
+        let queryString = "./moreinfo.html?q=" + mediaDetails.movieId;
 
-    moreInfoEL.addEventListener("click", () => {
-      location.assign(queryString);
-    });
+        moreInfoEL.addEventListener("click", () => {
+            location.assign(queryString);
+        });
 
-    // not sure if TIM //
-    // movieSearchedEl.addEventListener("click", function() {
-    //   var moreinfoLink = "https://www.google.com/"
-    //   window.location.href = moreinfoLink
 
-    // })
-  }
+
+        // On click rule for saving favourite movie to local storage when 'Add to fave' button is clicked
+        addToFavBtn.addEventListener("click", function() {
+            setItemToLocalStorage(mediaDetails)
+        })
+
+        //Local storage - Function for storing favourite movies
+
+        function setItemToLocalStorage(details) {
+            let savedMedia = []
+            var movieInform = document.querySelector("#input-search").value;
+            savedMedia.push(details);
+            localStorage.setItem(movieInform, JSON.stringify(savedMedia));
+            console.log(savedMedia)
+
+            let savedMovies = JSON.parse(localStorage.getItem(movieInform)) || [];
+
+
+        }
+
+
+        // not sure if TIM //
+        // movieSearchedEl.addEventListener("click", function() {
+        //   var moreinfoLink = "https://www.google.com/"
+        //   window.location.href = moreinfoLink
+
+        // })
+    }
 }
 
+
+
+
+
+
+
+
+
+
+
 function displayMediaInfo(details) {
-  resultDocumnetBackground.style.backgroundImage = mediaDetails.mediaImage;
+    resultDocumentBackground.style.backgroundImage = mediaDetails.mediaImage;
 }
