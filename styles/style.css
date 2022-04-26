@@ -144,7 +144,6 @@ a {
 } */
 
 .movie-container {
-  height: 400px;
   width: 90%;
   margin: 25px auto 25px auto;
   background-color: #000000;
@@ -153,13 +152,10 @@ a {
 }
 
 #movie-img {
-  background-color: aquamarine;
-  height: 400px;
-  width: 20%;
+  background-color: black;
 }
 
 .description-card {
-  width: 80%;
   padding: 20px;
   z-index: 2;
   color: #fffcf9;

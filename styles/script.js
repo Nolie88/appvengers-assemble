@@ -25,37 +25,38 @@ function getApi(movieName) {
 }
 
 function displayMovies(data) {
-    movieSearchedEl.innerText = "";
-    for (i = 0; i < data.Search.length; i++) {
-        let mediaDetails = {
-            mediaTitle: data.Search[i].Title,
-            mediaImage: data.Search[i].Poster,
-            movieId: data.Search[i].imdbID,
-        };
-        let movieSearchContainer = document.createElement("div");
-        movieSearchContainer.classList.add("search-display");
+  movieSearchedEl.innerText = "";
+  for (i = 0; i < data.Search.length; i++) {
+    let mediaDetails = {
+      mediaTitle: data.Search[i].Title,
+      mediaImage: data.Search[i].Poster,
+      movieId: data.Search[i].imdbID,
+    };
 
-        // add meadia poster
-        let moviePosterImg = document.createElement("img");
-        moviePosterImg.setAttribute("src", mediaDetails.mediaImage);
-        movieSearchContainer.appendChild(moviePosterImg);
+    let movieSearchContainer = document.createElement("div");
+    movieSearchContainer.classList.add("search-display");
 
-        // get movie title
-        let movieTile = document.createElement("p");
-        movieTile.appendChild(document.createTextNode(mediaDetails.mediaTitle));
-        movieSearchContainer.appendChild(movieTile);
+    // add meadia poster
+    let moviePosterImg = document.createElement("img");
+    moviePosterImg.setAttribute("src", mediaDetails.mediaImage);
+    movieSearchContainer.appendChild(moviePosterImg);
 
-        // created div to add more info btn and add to fav btn
+    // get movie title
+    let movieTile = document.createElement("p");
+    movieTile.appendChild(document.createTextNode(mediaDetails.mediaTitle));
+    movieSearchContainer.appendChild(movieTile);
 
-        let buttonDiv = document.createElement("div");
+    // created div to add more info btn and add to fav btn
 
-        //add more info btn
-        let moreInfoEL = document.createElement("button");
-        moreInfoEL.classList.add("moreinfo-btn");
-        moreInfoEL.appendChild(document.createTextNode("more info"));
-        buttonDiv.appendChild(moreInfoEL);
+    let buttonDiv = document.createElement("div");
 
-        //add to fav btn
+    //add more info btn
+    let moreInfoEL = document.createElement("button");
+    moreInfoEL.classList.add("moreinfo-btn");
+    moreInfoEL.appendChild(document.createTextNode("more info"));
+    buttonDiv.appendChild(moreInfoEL);
+
+    //add to fav btn
 
     let addToFavBtn = document.createElement("button");
     addToFavBtn.appendChild(document.createTextNode("Add to Fav"));

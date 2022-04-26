@@ -19,7 +19,7 @@
     <!-- This is the top Section, includes logo and nav -->
     <nav class="top has-text-white is-mobile-responsive has-bg-black navbar">
         <div class="top__brand">
-            <h4 class="logo">HollyView</h4>
+            <h4 class="logo">HOLLYVIEW</h4>
         </div>
         <div class="top__burger is-end">
             <span></span>
@@ -32,11 +32,11 @@
             </ul>
         </div>
     </nav>
-    <main class="movie-container">
-        <div id="movie-img"><img id="movie-image"></div>
-        <div class="description-card">
+    <main class="movie-container grid">
+        <div id="movie-img" class="column is-full is-desktop-one-fifth"><img id="movie-image"></div>
+        <div class="description-card column">
             <h1><span id="movie-title">Movie title</span></h1>
-            <p><span id="movie-synopsis">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            <p><span id="movie-synopsis">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
             </span></p>
             <button id="add-btn">Add To Favourites</button>
             <p id="genre"></p>
@@ -48,37 +48,19 @@
     <section id="videos">
 
     </section>
-    <section class="actors-container">
-        <h2>ACTORS</h2>
-        <div class="actors-wrapper">
-            <div class="actors-card">
-                <span id="actors-img">img test</span><span id="actors-name">Tom Holland</span><span id="character-name">Peter Parker</span>
-            </div>
-            <div class="actors-card">
-                <span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span>
-            </div>
-            <div class="actors-card">
-                <span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span>
-            </div>
-            <div class="actors-card">
-                <span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span>
-            </div>
-            <div class="actors-card">
-                <span id="actors-img"></span><span id="actors-name"></span><span id="character-name"></span>
-            </div>
-        </div>
-    </section>
+ 
     <footer>
-        <nav class="container has-centered top" id="footer">
-            <div class="top__social">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <p> © HollyView by AppVengers Assemble 2022 </p>
-                </ul>
+        <nav class="top" id="footer">
+            <div class="has-centered container">
+                <div class="top__social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <p> © HollyView by AppVengers Assemble 2022 </p>
+                    </ul>
+                </div>
             </div>
-
     </footer>
 
     <!-- More info JS added. -->
@@ -86,4 +68,3 @@
     <script src="./styles/moreinfobtn.js"></script>
 </body>
 
-</html>
