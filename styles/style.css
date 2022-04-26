@@ -108,18 +108,6 @@ a {
   --active-font-color: inherit;
 }
 
-#footer {
-  padding: 10px;
-  align-items: center;
-  background-color: #747578;
-  width: fit-content;
-}
-
-#footer p {
-  margin-left: 30px;
-  margin-top: 5px;
-}
-
 /* More info.html CSS starts here */
 
 /* #background-pic {
@@ -261,6 +249,8 @@ a {
 }
 
 #footer {
+  display: flex;
+  justify-content: center;
   padding: 10px;
   color: #fffcf9;
   align-items: center;
@@ -279,7 +269,7 @@ a {
 
 #movie-search {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -288,7 +278,7 @@ a {
   box-shadow: 0 10px 10px -4px rgb(0 0 0 / 15%);
   background-color: transparent;
   color: #333;
-  margin: 0.3em;
+  margin: 0.5em;
   position: relative;
   width: 200px;
 }
