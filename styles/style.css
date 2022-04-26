@@ -26,7 +26,7 @@ body {
 }
 
 .hero__content {
-  background-image: url("/img/picmovies.jpeg");
+  background-image: url("./img/picmovies.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -76,6 +76,35 @@ body {
 
 .container {
   padding: 20px;
+}
+
+.moreinfo-btn:hover {
+  box-shadow: 0 0 40px 40px var(--red) inset ;
+}
+
+.moreinfo-btn {
+  padding: 5px;
+  position: relative;
+  left: 25px;
+  margin-right: 10PX;
+  border-radius: 10rem;
+  color: var(--white);
+  background-color: var(--black);
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.addfav-btn:hover {
+  box-shadow: 0 0 40px 40px var(--red) inset ;
+}
+
+.addfav-btn {
+  padding: 5px;
+  position: relative;
+  left: 25px;
+  border-radius: 10rem;
+  color: var(--white);
+  background-color: var(--black);
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 .top__brand {
@@ -133,6 +162,7 @@ a {
   width: 80%;
   padding: 20px;
   z-index: 2;
+  color: #fffcf9;
 }
 
 #movie-title {
@@ -146,6 +176,11 @@ a {
   z-index: 1;
 }
 
+#add-btn:hover, #add-btn:focus {
+  color:#fff;
+  outline: 0;
+}
+
 #add-btn {
   border: none;
   color: white;
@@ -156,14 +191,38 @@ a {
   cursor: pointer;
   background-color: #4caf50;
   z-index: 1;
+  position: relative;
+  top: 190px;
+  border-radius: 10rem;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+
+#add-btn:hover {
+  box-shadow: 0 0 40px 40px var(--red) inset ;
 }
 
 #genre {
   height: 10px;
+  padding: 30px;
   background-color: #000000;
   color: white;
-  margin-top: 25px;
+  margin-top: 1px;
   color: white;
+  position: relative;
+  bottom: 70px;
+  right: 20px;
+}
+
+
+#actors {
+  position: relative;
+  bottom: 50px;
+}
+
+#box {
+  position: relative;
+  bottom: 30px;
 }
 
 #movie-genre-1,

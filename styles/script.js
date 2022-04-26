@@ -57,10 +57,10 @@ function displayMovies(data) {
 
         //add to fav btn
 
-        let addToFavBtn = document.createElement("button");
-        addToFavBtn.appendChild(document.createTextNode("add to fav"));
-        buttonDiv.appendChild(addToFavBtn);
-        addToFavBtn.classList.add("addfav-btn");
+    let addToFavBtn = document.createElement("button");
+    addToFavBtn.appendChild(document.createTextNode("Add to Fav"));
+    buttonDiv.appendChild(addToFavBtn);
+    addToFavBtn.classList.add("addfav-btn");
 
         movieSearchContainer.appendChild(buttonDiv);
         movieSearchedEl.appendChild(movieSearchContainer);
