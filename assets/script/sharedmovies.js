@@ -1,5 +1,5 @@
 //Function for creating movie card. This is called on home page and favourites page, so was easier to create in new js file
-function createMovieCard(movie) {
+function createMovieCard(movie, movieId) {
   let movieSearchContainer = document.createElement("div");
   movieSearchContainer.classList.add("search-display");
 
@@ -22,5 +22,13 @@ function createMovieCard(movie) {
   moreInfoEL.appendChild(document.createTextNode("More Info"));
   buttonDiv.appendChild(moreInfoEL);
   movieSearchContainer.appendChild(buttonDiv);
+
+  // Get more info for each movie
+  let queryString = "./moreinfo.html?q=" + movieId;
+
+  moreInfoEL = movieSearchContainer.querySelector("button");
+  moreInfoEL.addEventListener("click", () => {
+    location.assign(queryString);
+  });
   return movieSearchContainer;
 }

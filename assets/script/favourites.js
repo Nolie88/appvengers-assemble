@@ -15,7 +15,7 @@ const savedMovieEl = document.getElementById("saved-movie");
 for (let key in movieLsObject) {
   let mediaDetailsSaved = movieLsObject[key];
 
-  let movieCard = createMovieCard(mediaDetailsSaved);
+  let movieCard = createMovieCard(mediaDetailsSaved, key);
 
   savedMovieEl.append(movieCard);
 }
