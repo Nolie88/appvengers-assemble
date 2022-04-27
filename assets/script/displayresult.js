@@ -1,4 +1,4 @@
-let resultBackground = document.getElementsByTagName("body")[0];
+let backgroundImageEl = document.querySelector(".bgimage");
 let mediaImgEl = document.querySelector("#movie-image");
 let mediaHead = document.querySelector("#movie-title");
 let mediaPlotEl = document.querySelector("#movie-synopsis");
@@ -6,7 +6,11 @@ let mediaGenreEl = document.querySelector("#genre");
 let mediaVideoEl = document.querySelector("#videos");
 apiKey = "2200016b";
 
-let ytubeApiKey = "AIzaSyBFEZloPQvEioYfxYyyYd6Hilo4mmztviw";
+let ytubeApiKey1Tony = "AIzaSyBFEZloPQvEioYfxYyyYd6Hilo4mmztviw";
+let ytubeApiKey2Sarah = "AIzaSyB9fIxT4q1wWiPkfCXZYv0ccqra1XNkqYA";
+let ytubeApiKey3Tim = "AIzaSyDycQa56_IrJcppRf5iItI8PSm6JOv2srk";
+let ytubeApiKey4Orcun = "AIzaSyBwsaaARRLecECAsBOCyD646NWjkh0kcew";
+let ytubeApiKey5Sam = "AIzaSyBbosWwT20vBTJeOJ9zQLIwNjHe32LlOn4";
 // get movie id from the clicked btn ,
 
 // call the api with the current movie ID
@@ -39,13 +43,16 @@ function displayMoreInfo(data) {
   let mediaGenre = data.Genre;
   let mediaImage = data.Poster;
 
-  //   resultBackground.style.backgroundImage(`url(${mediaImage})`);
   mediaImgEl.setAttribute("src", mediaImage);
   mediaHead.innerText = mediaTitle;
   mediaPlotEl.innerText = mediaDescp;
   mediaGenreEl.innerText = mediaGenre;
+  backgroundImageEl.style.backgroundImage = `url("${mediaImage}")`;
+  // backgroundImageEl.setAttribute("background-position", "center");
+  // backgroundImageEl.setAttribute("background-repeat", "no-repeat");
+  // backgroundImageEl.setAttribute("background-size", "cover");
 
-  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}&key=${ytubeApiKey}`;
+  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}&key=${ytubeApiKey2Sarah}`;
 
   fetch(youTubeUrl).then(function (response) {
     response.json().then(function (ydata) {
@@ -53,6 +60,22 @@ function displayMoreInfo(data) {
       displayVideo(ydata);
     });
   });
+
+  // const a = fetch(youTubeUrl)
+  //   .then(function (response) {
+  //     return response.json();
+  //   })
+  //   .then(function (ydata) {
+  //     console.log(ydata);
+  //     displayVideo(ydata);
+  //   });
+
+  // fetch(youTubeUrl)
+  //   .then((res) => res.json())
+  //   .then((ydata) => {
+  //     console.log(ydata);
+  //     displayVideo(ydata);
+  //   });
 }
 
 function displayVideo(ydata) {
