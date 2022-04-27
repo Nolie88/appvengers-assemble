@@ -219,14 +219,11 @@ a {
 }
 
 #genre {
-  height: 10px;
-  padding: 30px;
   background-color: #000000;
   color: white;
   margin-top: 1px;
   color: white;
   position: relative;
-  bottom: 70px;
   right: 20px;
 }
 
