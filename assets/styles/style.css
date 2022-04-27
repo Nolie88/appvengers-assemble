@@ -51,6 +51,15 @@ body {
     background-color: var(--white);
 }
 
+.search-box {
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    width: 30%;
+    outline: 0;
+    background-color: var(--white);
+    margin-left: 20px;
+}
+
 #search-box:hover,
 #search-box:focus {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);

@@ -1,7 +1,7 @@
 // Calls local storage
 var movieLs = localStorage.getItem("faves");
 const movieLsArray = JSON.parse(movieLs);
-const savedMovieEl = document.getElementById('saved-movie');
+const savedMovieEl = document.getElementById('movie-search');
 
 // Populate from Local Storage into favourites page
 for (let i = 0; i < movieLsArray.length; i++) {
