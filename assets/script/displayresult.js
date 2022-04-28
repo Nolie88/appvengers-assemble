@@ -44,6 +44,7 @@ function displayMoreInfo(data) {
   let mediaImage = data.Poster;
 
   mediaImgEl.setAttribute("src", mediaImage);
+  mediaImgEl.setAttribute("alt", `${mediaTitle} image`);
   mediaHead.innerText = mediaTitle;
   mediaPlotEl.innerText = mediaDescp;
   mediaGenreEl.innerText = mediaGenre;
@@ -52,7 +53,7 @@ function displayMoreInfo(data) {
   // backgroundImageEl.setAttribute("background-repeat", "no-repeat");
   // backgroundImageEl.setAttribute("background-size", "cover");
 
-  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}&key=${ytubeApiKey3Tim}`;
+  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}-trailer&key=${ytubeApiKey3Tim}`;
 
   fetch(youTubeUrl).then(function (response) {
     response.json().then(function (ydata) {

@@ -6,6 +6,7 @@ function createMovieCard(movie, movieId) {
   // add media poster
   let moviePosterImg = document.createElement("img");
   moviePosterImg.setAttribute("src", movie.mediaImage);
+  moviePosterImg.setAttribute("alt", `${movie.mediaTitle} image`);
   movieSearchContainer.appendChild(moviePosterImg);
 
   // get movie title
