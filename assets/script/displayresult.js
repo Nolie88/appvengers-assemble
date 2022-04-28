@@ -26,7 +26,7 @@ function getParameter() {
 // search api to get the more info of the page
 
 function searchApi(mediaId) {
-  let requestUrl = `http://www.omdbapi.com/?apikey=${apiKey}&i=${mediaId}`;
+  let requestUrl = `https://www.omdbapi.com/?apikey=${apiKey}&i=${mediaId}`;
   fetch(requestUrl).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
@@ -52,7 +52,7 @@ function displayMoreInfo(data) {
   // backgroundImageEl.setAttribute("background-repeat", "no-repeat");
   // backgroundImageEl.setAttribute("background-size", "cover");
 
-  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}&key=${ytubeApiKey2Sarah}`;
+  let youTubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${data.Title}&key=${ytubeApiKey3Tim}`;
 
   fetch(youTubeUrl).then(function (response) {
     response.json().then(function (ydata) {

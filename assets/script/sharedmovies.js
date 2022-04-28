@@ -10,11 +10,13 @@ function createMovieCard(movie, movieId) {
 
   // get movie title
   let movieTile = document.createElement("p");
+  movieTile.classList.add("media-title");
   movieTile.appendChild(document.createTextNode(movie.mediaTitle));
   movieSearchContainer.appendChild(movieTile);
 
   // created div to add more info btn and add to fav btn
   let buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("buttons-div");
 
   //add more info btn
   let moreInfoEL = document.createElement("button");
