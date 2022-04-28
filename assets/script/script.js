@@ -13,7 +13,7 @@ function handleFormSubmit(form) {
 }
 // Function calling the API
 function getApi(movieName) {
-  var requestUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
+  var requestUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}`;
 
   fetch(requestUrl).then(function (response) {
     response.json().then(function (data) {

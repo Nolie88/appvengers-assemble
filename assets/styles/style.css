@@ -6,6 +6,8 @@ body {
   min-height: 100vh;
   background-color: #000000;
   position: relative;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 .card_container {
@@ -65,9 +67,19 @@ body {
 
 #movie-search {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: #000000;
+}
+
+.saved-media {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 10px;
+  margin-bottom: 3em;
 }
 
 .search-display {
@@ -76,10 +88,19 @@ body {
   background-color: transparent;
   color: #333;
   margin: 0.5em;
-  position: relative;
-  flex: 1 1 30ch;
+  line-height: 1.5em;
+  /* position: relative; */
+  /* flex: 1 1 30ch; */
 }
 
+.media-title {
+  color: var(--red);
+  text-align: center;
+}
+.buttons-div {
+  display: flex;
+  justify-content: space-evenly;
+}
 .moreInfo {
   border: none;
   color: white;
@@ -116,8 +137,8 @@ body {
 
 .addfav-btn {
   padding: 5px;
-  position: relative;
-  left: 25px;
+  /* position: relative;
+  left: 25px; */
   border-radius: 10rem;
   color: var(--white);
   background-color: var(--black);
@@ -169,6 +190,7 @@ a {
   display: flex;
   z-index: 1;
   opacity: 0.8;
+  line-height: 2em;
 }
 
 #movie-img {
@@ -176,7 +198,7 @@ a {
 }
 
 .description-card {
-  padding: 20px;
+  /* padding: 20px; */
   z-index: 1;
   color: #fffcf9;
 }
@@ -218,33 +240,26 @@ a {
   box-shadow: 0 0 40px 40px var(--red) inset;
 }
 
-#genre {
+/* #genre {
+  height: 10px;
+  padding: 30px;
   background-color: #000000;
   color: white;
   margin-top: 1px;
   color: white;
   position: relative;
   right: 20px;
-}
+} */
 
-#actors {
+/* #actors {
   position: relative;
   bottom: 50px;
-}
+} */
 
-#box {
+/* #box {
   position: relative;
   bottom: 30px;
-}
-
-#movie-genre-1,
-#movie-genre-2,
-#movie-genre-3 {
-  padding: 7px;
-  margin: 10px;
-  background-color: var(--blue);
-  border-radius: 10px;
-}
+} */
 
 h2 {
   color: var(--grey);
@@ -256,18 +271,6 @@ h2 {
   width: 80%;
   margin: 0 auto;
   z-index: 1;
-}
-
-#actors-name {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#character-name {
-  display: flex;
-  justify-content: center;
 }
 
 /* footer section */
@@ -284,8 +287,8 @@ a {
   align-items: center;
   background-color: black;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   z-index: 1;
 }
 
